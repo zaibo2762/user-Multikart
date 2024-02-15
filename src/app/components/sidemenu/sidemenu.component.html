@@ -1,0 +1,72 @@
+@if (isSidebarOpen) {
+<aside>
+    <div class="side">
+        <div class="back">
+            
+            <button  (click)="closeSidebar()"><fa-icon [icon]="arrow" ></fa-icon>&nbsp;Back</button>
+        </div>
+        <div class="options">
+            <ul>
+                <li>CLOTHING  <span>></span>
+                    <div class="clothing">
+                        <div class="mens">
+                            <h6>Mens Fashion</h6>
+                            <p>Sports Wears</p>
+                            <p>Top</p>
+                            <p>Bottom</p>
+                            <p>Ethic wear</p>
+                            <p>Sports Wears</p>
+                            <p>Shirts</p>
+                            <p>Bottom</p>
+                            <p>Ethics Wears</p>
+                            <p>Sports Wears</p>
+                        </div>
+                        <div class="women">
+                            <h6>Women Fashion</h6>
+                            <p>Dresses</p>
+                            <p>Skirts</p>
+                            <p>Western Wear</p>
+                            <p>Ethic wear</p>
+                            <p>Sports Wears</p>
+                            <p>Ethic wear</p>
+                            <p>Bottom</p>
+                            <p>Ethics Wears</p>
+                            <p>Sports Wears</p>
+                        </div>
+                    </div></li>
+                <li>BAGS  <span>></span>
+                   <div class="access">
+                    
+                        @for (bag of Bags; track bag) {
+                            <p>{{bag.name}}</p>
+                        }
+                    
+                   </div></li>
+                <li>FOOTWEAR  <span>></span>
+                <div class="access">
+                    @for (foot of Footwear; track foot) {
+                        <p>{{foot.name}}</p>
+                    }
+                </div></li>
+                <li>WATCHES</li>
+                <li>ACCESSORIES  <span>></span>
+                <div class="access">
+                    @for (acess of Accessories; track acess) {
+                        <p>{{acess.name}}</p>
+                    }
+                </div></li>
+                <li>HOUSE OF DESIGN</li>
+                <li>BEAUTY AND PERSONAL CARE  <span>></span>
+                    <div class="access">
+                        @for (beauty of Beauty; track beauty) {
+                            <p>{{beauty.name}}</p>
+                        }
+                    </div></li>
+                <li>HOME AND DECOR</li>
+                <li>KITCHEN</li>
+            </ul>
+        </div>
+        
+    </div>
+</aside>
+}
