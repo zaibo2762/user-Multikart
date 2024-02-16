@@ -1,0 +1,80 @@
+.text{
+    position: absolute;
+  top: 160px;
+  left: 150px;
+  /* background-color: rgba(0, 0, 0, 0.5);  */
+  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+.text h1{
+   font-size: 70px;
+}
+.but{
+      height: 50px;
+      width: 150px;
+      background-color: orangered;
+      border: none;
+      color: white;
+}
+.but:hover{
+    background-color: white;   
+    color: black;
+    border: 1px solid orangered;
+    transform: scale(1.1); /* Add a subtle scaling effect */
+  transition: all 0.3s ease-in-out;
+}
+.banner1{
+    height: auto;
+    width: 50%;
+    /* background-color: aqua; */
+    margin-top: 40px;
+}
+.banner1 img{
+    margin-left: 150px;
+    margin-top: 10px;
+}
+.banner1 p{
+    position: absolute;
+    margin-left: 450px;
+    top: 130%;
+    font-weight: bolder;
+    font-size: large;
+    color: orangered;
+}
+.banner1 h1{
+    position: absolute;
+    margin-left: 440px;
+    top: 135%;
+    font-size: 50px;
+}
+.banner{
+    display: flex;
+}
+.banner2{
+    height: auto;
+    width: 50%;
+    /* background-color: aqua; */
+    margin-top: 40px;
+}
+.banner2 img{
+    margin-left: 35px;
+    margin-top: 10px;
+}
+.banner2 p{
+    position: absolute;
+    margin-left: 300px;
+    top: 130%;
+    font-weight: bolder;
+    font-size: large;
+    color: orangered;
+}
+.banner2 h1{
+    position: absolute;
+    margin-left: 250px;
+    top: 135%;
+    font-size: 50px;
+}

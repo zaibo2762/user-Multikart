@@ -1,4 +1,4 @@
-<nav class="navbar ">
+<nav class="navbar fixed-top sticky-top ">
     <div class="container-fluid">
       <div class="icon">
         <a (click)="toggleSidebar()"><fa-icon [icon]="menu" class="fa-2x"></fa-icon></a>
@@ -6,14 +6,100 @@
       </div>
       <div class="nav-items">
         <ul>
-          <li><div>HOME </div><span>&nbsp;></span>
-          </li>
-          <li><div>SHOP</div> <span>&nbsp;></span></li>
-          <li><div>PRODUCTS</div> <span>&nbsp;></span></li>
-          <li><div>FEATURES</div> <span>&nbsp;></span></li>
-          <li><div>PAGES</div> <span>&nbsp;></span></li>
-          <li><div>BLOGS</div><span>&nbsp;></span></li>
+          <li><div class="item">HOME &nbsp;<fa-icon [icon]="down"></fa-icon> </div>
+            <div class="hidden">
+              @for (home of Home; track home) {
+                <a routerLink="/clothing" class="menu">{{home.name}}</a>
+              }
+            </div></li>
+          <li><div class="item">SHOP &nbsp;<fa-icon [icon]="down"></fa-icon></div>
+            <div class="hidden">
+              @for (shop of Shop; track shop) {
+                <a  class="menu">{{shop.name}}</a>
+              }
+            </div> </li>
+          <li><div class="item">PRODUCTS &nbsp;<fa-icon [icon]="down"></fa-icon></div>
+            <div class="hidden">
+              @for (prod of Product; track prod) {
+                <a class="menu">{{prod.name}}</a>
+              }
+            </div> </li>
+          <li><div class="item">FEATURES &nbsp;<fa-icon [icon]="down"></fa-icon></div>
+          <div class="Hidden">
+            <div class="port">
+              <h4>Portfolio</h4>
+              @for (port of Portfolio; track port) {
+                <a>{{port.name}}</a>
+              }
+            </div>
+            <div class="port">
+              <h4>Add To Cart</h4>
+              @for (add of Add; track add) {
+                <a>{{add.name}}</a>
+              }
+            </div>
+            <div class="port">
+              <h4>Theme Element</h4>
+              @for (theme of Theme; track theme) {
+                <a>{{theme.name}}</a>
+              }
+            </div>
+            <div class="port">
+              <h4>Product Element</h4>
+              @for (prod of Prod; track prod) {
+                <a>{{prod.name}}</a>
+              }
+            </div>
+            <div class="port">
+              <h4>Email Template</h4>
+              @for (email of Email; track email) {
+                <a>{{email.name}}</a>
+              }
+            </div>
+          </div></li>
+          <li><div class="item">PAGES &nbsp;<fa-icon [icon]="down"></fa-icon></div>
+            <div class="hidden">
+              @for (page of Page; track page) {
+                <a class="menu">{{page.name}}</a>
+              }
+            </div> </li>
+          <li><div class="item">BLOGS &nbsp;<fa-icon [icon]="down"></fa-icon></div>
+            <div class="hidden">
+              @for (blog of Blog; track blog) {
+                <a class="menu">{{blog.name}}</a>
+              }
+            </div></li>
         </ul>
+      </div>
+      <div class="right">
+        <div class="search">
+        <fa-icon [icon]="search" class="fa-2x"></fa-icon>
+      </div>
+      <div class="set">
+        <fa-icon [icon]="setting" class="fa-2x"></fa-icon>
+        <div class="lan">
+          <h5>Language</h5>
+          @for (lan of Lan; track lan) {
+            <a>{{lan.name}}</a>
+          }
+          <h5>Currency</h5>
+          @for (curr of Curr; track curr) {
+            <a>{{curr.name}}</a>
+          }
+        </div>
+      </div>
+      <div class="cart">
+        <fa-icon [icon]="cart" class="fa-2x"></fa-icon>
+        <div class="info">
+          <p>Your Cart is currently empty..</p>
+        </div>
+        <div class="badge">
+        <span class="position-absolute top-9 start-100 translate-middle badge rounded-pill bg-danger">
+          0
+        </span>
+        
+      </div>
+      </div>
       </div>
     </div>
   </nav>

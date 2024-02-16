@@ -3,11 +3,11 @@
     width: 100%;
     height: 50px;
     background-color: rgb(216, 208, 208);
-    position: fixed;
+    position: sticky;
     color: gray;
     display: flex;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 10000;
 }
 .welcome{
     margin-top: 10px;
@@ -39,7 +39,7 @@ a{
 .log{
     /* height: 50px; */
     width: 100px;
-    /* background-color: black; */
+    background-color: white;
     margin-top: 15px;
     /* display: flex; */
     flex-direction: column;

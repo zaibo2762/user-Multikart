@@ -1,8 +1,11 @@
 .navbar{
     position: sticky;
-    margin-top: 50px;
+    /* margin-top: px; */
     height: 100px;
-    border: 1px solid black;
+    width: 100%;
+    z-index: 4;
+    background-color: white;
+    /* border: 1px solid black; */
 }
 .icon{
     height: 90px;
@@ -17,6 +20,7 @@
     margin-left: 60px;
 }
 .nav-items{
+    position: absolute;
     height: 90px;
     width: 700px;
     /* border: 1px solid black; */
@@ -24,6 +28,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 400px;
 }
 .nav-items ul{
     display: flex;
@@ -35,13 +40,137 @@
     margin-right: 30px;
     display: flex;
     cursor: pointer;
+    margin-top: 25px;
     /* justify-content: space-between; */
 }
-.nav-items div{
-    margin-top: 5px;
-    margin-right: 5px;
+
+.item{
+    display: flex;
+    justify-content: space-evenly;
 }
-.nav-items span{
-    transform: rotate(90deg);
-    
+.item:hover{
+    color: palevioletred;
+}
+.hidden{
+    position:absolute;
+    height: auto;
+    width: 150px;
+    background-color: white;
+    margin-top: 50px ;
+    /* display: none; */
+}
+.menu{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 25px;
+    display: none;
+}
+.nav-items li:hover .menu{
+    display: block;
+}
+.Hidden{
+    position: absolute;
+    left: -40%;
+    height: 300px;
+    width: 1200px;
+    margin-right: 200px;
+    background-color: white;
+    margin-top: 50px;
+    display: none;
+}
+.port{
+    height: 100%;
+    width:20%;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.port h4{
+    margin-left: 30px;
+}
+.port a{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.nav-items li:hover .Hidden{
+    display: flex;
+}
+.right{
+    height: 70px;
+    width: 200px;
+    /* background-color: aqua; */
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.badge{
+    height: 20px;
+    width: 20px;
+    font-size: medium;
+    align-items: center;
+    position: absolute;
+    left: 80%;
+    /* margin-right: ; */
+}
+.badge span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search{
+    cursor: pointer;
+}
+.cart{
+    cursor: pointer;
+}
+.set{
+    cursor: pointer;
+}
+.lan{
+    height: auto;
+    width: 120px;
+    position: absolute;
+    background-color: white;
+    left: 0px;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+
+}
+.lan h5{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.lan a{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.set:hover .lan{
+    display: flex;
+}
+.info{
+    /* height: au;
+    width: 200px; */
+    position: absolute;
+    background-color: white;
+    left: -10px;
+    align-items: center;
+    display: none;
+}
+.cart:hover .info{
+    display: block;
+}
+a:hover{
+    color: palevioletred;
+}
+.Hidden a:hover{
+    color: palevioletred;
 }
