@@ -7,7 +7,7 @@
     color: gray;
     display: flex;
     justify-content: space-between;
-    z-index: 10000;
+    z-index: 1000;
 }
 .welcome{
     margin-top: 10px;

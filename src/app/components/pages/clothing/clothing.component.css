@@ -78,3 +78,188 @@
     top: 135%;
     font-size: 50px;
 }
+.offer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.top{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.top p{
+    color: palevioletred;
+    font-size: 30px;
+}
+.top h1{
+    font-size: 50px;
+}
+.items{
+    height: 500px;
+    width: 100%;
+    margin-top: 30px;
+    /* border: 1px solid black; */
+    display: flex;
+}
+.item-c{
+    height: 450px;
+    width: 300px;
+    /* border: 1px solid black; */
+    margin-top: 30px;
+    margin-left: 30px;
+
+}
+.s-img{
+     position: absolute;
+    margin-top: -300px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.s-img img{
+    margin-top: 10px;
+    opacity: 0.5;
+}
+.s-img img:hover{
+    
+    opacity: 1;
+}
+.price{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.star{
+    color: yellow;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.info p{
+    margin: 0;
+}
+.icon-container{
+    position: absolute;
+    top: 70%;
+    right: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.m-img{
+    position: relative;
+    cursor: pointer;
+}
+.icon-container fa-icon{
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.icon-container fa-icon:hover{
+    color: palevioletred;
+}
+.m-img:hover .icon-container{
+    opacity: 1;
+} 
+.b-container {
+    position: relative;
+     height: 500px;
+     width: 100%;
+  }
+  
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/bg1.jpg"); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .text-container {
+    position: absolute;
+    padding: 20px;
+    color: black; 
+    margin-top: 100px;
+    margin-left: 100px;
+  }
+  .text-container h3{
+    margin-left: 190px;
+    font-size: 80px;
+    font-weight: bold;
+    color: palevioletred;
+  }
+  .text-container h1{
+    font-size: 90px;
+  }
+  .text-container h2{
+    font-size: 40px;
+    margin-left: 160px;
+  }
+  .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+  .nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+
+  }
+.nav a:hover{
+    color: palevioletred;
+}
+.information{
+    height: 200px;
+    width: 75%;
+    /* background-color: aqua; */
+    margin-left: 200px;
+    margin-top: 20px;
+    display: flex;
+    border-top: 0.5px solid grey;
+    border-bottom: 0.5px solid grey;
+}
+.ship{
+    height: 150px;
+    width: 30%;
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 40px;
+    color: palevioletred;
+    display: flex;
+    border-right: 0.5px solid grey;
+}
+.ship fa-icon{
+    margin-top: 20px;
+}
+.free{
+    margin-top: 40px;
+    margin-left: 10px;
+    color: black;
+
+    
+}
+.ship2{
+    height: 150px;
+    width: 30%;
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 40px;
+    color: palevioletred;
+    display: flex;
+}
+.ship2 fa-icon{
+    margin-top: 20px;
+}
