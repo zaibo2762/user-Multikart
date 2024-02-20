@@ -27,7 +27,7 @@ Home = [
   },
   {
     name:'Vegetables',
-    path:"clothing"
+    path:"vegetable"
   },
   {
     name:'Watch',

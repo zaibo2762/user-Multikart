@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {faStar,faCartShopping,faMagnifyingGlass,faHeart,faCodeCompare,faTruck,faClock,faBullhorn} from '@fortawesome/free-solid-svg-icons';
 
@@ -7,7 +7,7 @@ import {faStar,faCartShopping,faMagnifyingGlass,faHeart,faCodeCompare,faTruck,fa
 @Component({
   selector: 'app-clothing',
   standalone: true,
-  imports: [FontAwesomeModule,RouterOutlet,RouterLink],
+  imports: [FontAwesomeModule,RouterOutlet,RouterLink,RouterLinkActive],
   templateUrl: './clothing.component.html',
   styleUrl: './clothing.component.css'
 })

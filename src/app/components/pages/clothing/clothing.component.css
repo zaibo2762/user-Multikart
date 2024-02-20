@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: black;
     z-index: 3;
 }
 .text h1{
@@ -236,10 +237,18 @@
     width: 30%;
     background-color: white;
     margin-left: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
     color: palevioletred;
     display: flex;
     border-right: 0.5px solid grey;
+}
+.ship:hover h5{
+    cursor: pointer;
+    color: palevioletred;
+}
+.ship2:hover h5{
+    cursor: pointer;
+    color: palevioletred;
 }
 .ship fa-icon{
     margin-top: 20px;
@@ -256,10 +265,72 @@
     width: 30%;
     background-color: white;
     margin-left: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
     color: palevioletred;
     display: flex;
 }
 .ship2 fa-icon{
     margin-top: 20px;
+}
+.blogs{
+    height: 400px;
+    width: 80%;
+    /* background-color: aqua; */
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    height: 350px;
+    width:30%;
+    margin: 20px;
+}
+.data{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.data h5{
+    color: palevioletred;
+    
+}
+.data h4{
+    cursor: pointer;
+}
+.data h4:hover{
+    color: palevioletred;
+}
+.data p{
+    opacity: 0.5;
+    font-weight: bold;
+}
+.card img{
+    opacity: 0.7; 
+  transition: opacity 0.5s ease-in-out;
+}
+.card img:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.logo{
+    height: 100px;
+    width: 90%;
+    /* background-color: aqua; */
+    margin-left: 5%;
+    display: flex;
+    margin-top: 20px;
+}
+.logo img{
+    margin-left: 120px;
+    opacity: 0.6;
+}
+.logo img:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.active{
+    color: palevioletred;
 }

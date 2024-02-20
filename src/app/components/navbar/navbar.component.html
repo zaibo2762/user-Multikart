@@ -9,7 +9,7 @@
           <li><div class="item">HOME &nbsp;<fa-icon [icon]="down"></fa-icon> </div>
             <div class="hidden">
               @for (home of Home; track home) {
-                <a routerLink="/clothing" class="menu">{{home.name}}</a>
+                <a routerLink="{{home.path}}" class="menu">{{home.name}}</a>
               }
             </div></li>
           <li><div class="item">SHOP &nbsp;<fa-icon [icon]="down"></fa-icon></div>
