@@ -31,11 +31,11 @@ Home = [
   },
   {
     name:'Watch',
-    path:"clothing"
+    path:"watches"
   },
   {
     name:'Furniture',
-    path:"clothing"
+    path:"furniture"
   },
   {
     name:'Flower',

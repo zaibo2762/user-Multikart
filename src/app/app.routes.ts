@@ -6,12 +6,17 @@ import { FeaturedComponent } from './components/pages/clothing/featured/featured
 import { SaleComponent } from './components/pages/clothing/sale/sale.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { VegetablesComponent } from './components/pages/vegetables/vegetables.component';
+import { WatchesComponent } from './components/pages/watches/watches.component';
+import { WNewArrivalComponent } from './components/pages/watches/w-new-arrival/w-new-arrival.component';
+import { WBestsellerComponent } from './components/pages/watches/w-bestseller/w-bestseller.component';
+import { WOnsaleComponent } from './components/pages/watches/w-onsale/w-onsale.component';
+import { FurnitureComponent } from './components/pages/furniture/furniture.component';
 
 export const routes: Routes = [
     {
         path:'clothing',
         component:ClothingComponent,
-        children: [ // Child routes nested within the parent
+        children: [ 
       { path: '', component: NewProductComponent },
       { path:'newproduct',component:NewProductComponent },
       {path:'bestseller',component:BestSellerComponent},
@@ -30,6 +35,21 @@ export const routes: Routes = [
     {
       path:'vegetable',
       component:VegetablesComponent
+    },
+    {
+      path:'watches',
+      component:WatchesComponent,
+      children: [ 
+        { path: '', component: WNewArrivalComponent },
+        { path:'newarrival',component:WNewArrivalComponent },
+        {path:'bestseller',component:WBestsellerComponent},
+        { path:'sale',component:WOnsaleComponent },
+        
+      ],
+    },
+    {
+      path:'furniture',
+      component:FurnitureComponent
     },
     
 ];

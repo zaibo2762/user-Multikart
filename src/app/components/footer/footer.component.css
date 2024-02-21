@@ -41,7 +41,7 @@
   margin-right: 10px;
 }
 .search button{
-    background-color: palevioletred;
+    background-color: orangered;
   border: none;
   color: white;
   padding: 9px 20px;
@@ -90,7 +90,7 @@
     height: 30px;
 }
 .icons svg:hover{
-    fill: palevioletred;
+    fill: orangered;
     cursor: pointer;
 }
 .right{

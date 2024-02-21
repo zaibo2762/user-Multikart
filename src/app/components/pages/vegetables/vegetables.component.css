@@ -47,17 +47,17 @@
     background-color: white;
     margin-left: 20px;
     margin-top: 20px;
-    color: palevioletred;
+    color: orangered;
     display: flex;
     border-right: 0.5px solid grey;
 }
 .ship:hover h5{
     cursor: pointer;
-    color: palevioletred;
+    color: orangered;
 }
 .ship2:hover h5{
     cursor: pointer;
-    color: palevioletred;
+    color: orangered;
 }
 .ship fa-icon{
     margin-top: 20px;
@@ -75,7 +75,7 @@
     background-color: white;
     margin-left: 20px;
     margin-top: 20px;
-    color: palevioletred;
+    color: orangered;
     display: flex;
 }
 .ship2 fa-icon{
@@ -96,7 +96,7 @@
 .line{
     height: 5px;
     width: 250px;
-    background-color: palevioletred;
+    background-color: orangered;
     margin-left: 50px;
 }
 .items{
@@ -178,7 +178,7 @@
     margin-left: 10px;
 }
 .icon-container fa-icon:hover{
-    color: palevioletred;
+    color: orangered;
 }
 .m-img:hover .icon-container{
     opacity: 1;
@@ -213,7 +213,7 @@
     margin-left: 190px;
     font-size: 80px;
     font-weight: bold;
-    color: palevioletred;
+    color: orangered;
   }
   .text-container h1{
     font-size: 90px;
@@ -222,3 +222,84 @@
     font-size: 40px;
     margin-left: 160px;
   }
+  .five{
+    height: 600px;
+    width: 100%;
+    /* background-color: aqua; */
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .first{
+    height: 600px;
+    width:  30%;
+    /* background-color: aliceblue; */
+    
+  }
+  .bee{
+    height: 50%;
+    width: 100%;
+    /* background-color: palegoldenrod; */
+    display: flex;
+    justify-content: space-between;
+  }
+  .price2{
+    margin-top: 100px;
+    margin-right: 20px;
+  }
+  .cabbage{
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(29, 24, 17); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .price3{
+    margin-top: 30px;
+  }
+  .blogs{
+    height: 400px;
+    width: 80%;
+    /* background-color: aqua; */
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    height: 350px;
+    width:30%;
+    margin: 20px;
+}
+.data{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.data h5{
+    color: orangered;
+    
+}
+.data h4{
+    cursor: pointer;
+}
+.data h4:hover{
+    color: orangered;
+}
+.data p{
+    opacity: 0.5;
+    font-weight: bold;
+}
+.card img{
+    opacity: 0.7; 
+  transition: opacity 0.5s ease-in-out;
+}
+.card img:hover{
+    opacity: 1;
+    cursor: pointer;
+}

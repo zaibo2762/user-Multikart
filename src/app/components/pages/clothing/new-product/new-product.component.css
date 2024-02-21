@@ -66,7 +66,7 @@
     margin-right: 5px;
 }
 .icon-container fa-icon:hover{
-    color: palevioletred;
+    color: orangered;
 }
 .m-img:hover .icon-container{
     opacity: 1;
