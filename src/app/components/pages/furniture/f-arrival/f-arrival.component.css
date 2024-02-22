@@ -1,0 +1,75 @@
+.items{
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+  height: auto; /* Remove fixed height for dynamic content */
+  margin-top: 30px;
+    width: 100%;
+   
+    
+}
+.item-c{
+    height: 450px;
+    width: 300px;
+    /* border: 1px solid black; */
+    margin-top: 30px;
+    margin-left: 30px;
+
+}
+.s-img{
+     position: absolute;
+    margin-top: -300px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.s-img img{
+    margin-top: 10px;
+    opacity: 0.5;
+}
+.s-img img:hover{
+    
+    opacity: 1;
+}
+.price{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.star{
+    color: yellow;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-container{
+    position: absolute;
+    top: 70%;
+    right: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.m-img{
+    position: relative;
+    cursor: pointer;
+}
+.icon-container fa-icon{
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.icon-container fa-icon:hover{
+    color: orangered;
+}
+.m-img:hover .icon-container{
+    opacity: 1;
+} 
+.price1{
+    font-weight: bold;
+    color: orangered;
+}

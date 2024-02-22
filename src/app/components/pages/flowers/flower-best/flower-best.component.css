@@ -1,0 +1,24 @@
+.items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    height: auto; /* Remove fixed height for dynamic content */
+    margin-top: 30px;
+      width: 100%;
+}
+.item-c{
+    height: 150px;
+    width: 250px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.star{
+    color: yellow;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}

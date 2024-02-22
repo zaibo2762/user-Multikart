@@ -11,6 +11,13 @@ import { WNewArrivalComponent } from './components/pages/watches/w-new-arrival/w
 import { WBestsellerComponent } from './components/pages/watches/w-bestseller/w-bestseller.component';
 import { WOnsaleComponent } from './components/pages/watches/w-onsale/w-onsale.component';
 import { FurnitureComponent } from './components/pages/furniture/furniture.component';
+import { FSaleComponent } from './components/pages/furniture/f-sale/f-sale.component';
+import { FArrivalComponent } from './components/pages/furniture/f-arrival/f-arrival.component';
+import { FBestComponent } from './components/pages/furniture/f-best/f-best.component';
+import { FlowersComponent } from './components/pages/flowers/flowers.component';
+import { FlowerBestComponent } from './components/pages/flowers/flower-best/flower-best.component';
+import { FlowerFeaturedComponent } from './components/pages/flowers/flower-featured/flower-featured.component';
+import { FlowerSaleComponent } from './components/pages/flowers/flower-sale/flower-sale.component';
 
 export const routes: Routes = [
     {
@@ -49,7 +56,25 @@ export const routes: Routes = [
     },
     {
       path:'furniture',
-      component:FurnitureComponent
+      component:FurnitureComponent,
+      children: [ 
+        { path: '', component: FSaleComponent },
+        { path:'newarrival',component: FArrivalComponent },
+        {path:'bestseller',component:FBestComponent},
+        { path:'sale',component:FSaleComponent },
+        
+      ],
+    },
+    {
+      path:'flower',
+      component:FlowersComponent,
+      children: [ 
+        { path: '', component: FlowerBestComponent },
+        { path:'featured',component: FlowerFeaturedComponent },
+        {path:'bestseller',component:FlowerBestComponent},
+        { path:'sale',component:FlowerSaleComponent },
+        
+      ],
     },
     
 ];

@@ -1,0 +1,25 @@
+
+<div class="best">
+    <div class="items">
+        @for (item of flowers; track item) {
+        <div class="item-c">
+            <div class="img">
+                <img src="{{item.url}}" alt="flower" height="150px">
+            </div>
+            <div class="txt">
+                <div class="star">
+                    <fa-icon [icon]="star"></fa-icon>
+                    <fa-icon [icon]="star"></fa-icon>
+                    <fa-icon [icon]="star"></fa-icon>
+                    <fa-icon [icon]="star"></fa-icon>
+                    <fa-icon [icon]="star"></fa-icon>
+                  </div>
+                  <div class="info">
+                    <span>{{item.title}}</span>
+                    <span >{{item.price}}</span>
+                  </div>
+            </div>
+        </div>
+    }
+    </div>
+</div>

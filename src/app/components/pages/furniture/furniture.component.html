@@ -1,16 +1,16 @@
 <div class="furniture">
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" >
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="assets/12.jpg" class="d-block w-100" alt="...">
+            <img src="assets/12.jpg" class="d-block w-100" alt="..." height="450px">
             <div class="text">
                 <h4>Furniture Sofa</h4>
                 <h1>HARMONY SOFA</h1>
                 <button class="but">Shop Nows </button>
               </div>
           </div>
-          <div class="carousel-item">
-            <img src="assets/13.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-item ">
+            <img src="assets/13.jpg" class="d-block w-100" alt="..." height="450px">
             <div class="text">
                 <h4>Furniture Sofa</h4>
                 <h1>HARMONY SOFA</h1>
@@ -28,4 +28,68 @@
           <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <div class="banners">
+      @for (item of banners; track item) {
+      <div class="banner">
+        <img src="{{item.url}}" alt="b1" height="170px">
+        <div class="txt">
+          <h5>{{item.per}}</h5>
+          <h1>{{item.title}}</h1>
+        </div>
+      </div>
+    }
+    </div>
+    <div class="heading">
+      <h3>Exclusive Products</h3>
+      <h1>SPECIAL PRODUCTS</h1>
+      <div class="line"></div>
+  </div>
+  <div class="nav">
+    <a routerLink="/furniture/sale" routerLinkActive="active">ON SALE</a>
+    <a routerLink="/furniture/newarrival" routerLinkActive="active">NEW ARRIVAL</a>
+    <a routerLink="/furniture/bestseller" routerLinkActive="active">BEST SELLERS</a>
+    
+   </div>
+   <div class="change">
+    <router-outlet></router-outlet>
+   </div>
+   <div class="b-container">
+    <div class="background-image"></div>
+    <div class="text-container">
+      <h3>2018</h3>
+      <h1>INTERIOR DESIGN HOME</h1>
+      <h2>Special Offer</h2>
+    </div>
+  </div>
+  <div class="heading">
+    <h3>Recent Story</h3>
+    <h1>FROM THE BLOG</h1>
+    <div class="line"></div>
+</div>
+<div class="blogs">
+  <div class="card">
+    <img src="assets/b10.jpg" alt="img">
+    <div class="data">
+      <h5>25 January 2018</h5>
+      <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+      <p>by john Dio, 2 comments</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="assets/b11.jpg" alt="img">
+    <div class="data">
+      <h5>26 January 2018</h5>
+      <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+      <p>by john Dio, 2 comments</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="assets/b12.jpg" alt="img">
+    <div class="data">
+      <h5>27 January 2018</h5>
+      <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+      <p>by john Dio, 2 comments</p>
+    </div>
+  </div>
+</div>
 </div>

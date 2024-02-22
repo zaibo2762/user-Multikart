@@ -39,7 +39,7 @@ Home = [
   },
   {
     name:'Flower',
-    path:"clothing"
+    path:"flower"
   },
   {
     name:'Beauty',

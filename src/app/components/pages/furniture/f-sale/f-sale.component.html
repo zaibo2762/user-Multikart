@@ -1,0 +1,35 @@
+<div class="items">
+    @for (item of sale; track item) {
+      
+         <div class="item-c">
+          <div class="all">
+           <div class="m-img">
+           <img src="{{item.mainimg}}" alt="main" width="295px" height="350px">
+           <div class="icon-container">
+            <fa-icon [icon]="cart"></fa-icon>
+            <fa-icon [icon]="search"></fa-icon>
+            <fa-icon [icon]="heart"></fa-icon>
+            <fa-icon [icon]="compare"></fa-icon>
+           </div>
+           </div>
+           
+          
+           
+        </div>
+           <div class="price">
+              <div class="star">
+              <fa-icon [icon]="star"></fa-icon>
+              <fa-icon [icon]="star"></fa-icon>
+              <fa-icon [icon]="star"></fa-icon>
+              <fa-icon [icon]="star"></fa-icon>
+              <fa-icon [icon]="star"></fa-icon>
+            </div>
+            <div class="info">
+            <span>{{item.title}}</span>
+            <span class="price1">{{item.price}}</span>
+          </div>
+            
+           </div>
+         </div>
+        }
+      </div>
