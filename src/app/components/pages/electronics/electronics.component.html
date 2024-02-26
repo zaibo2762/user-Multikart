@@ -1,0 +1,32 @@
+<div class="electronic">
+    <div class="main-banner">
+        <div class="one">
+            <img src="assets/banner10.jpg" alt="electronic" height="650px">
+        </div>
+        <div class="two">
+            <img src="assets/banner11.jpg" alt="electronic">
+            <img src="assets/banner12.jpg" alt="electronic">
+        </div>
+    </div>
+    <div class="banners">
+        @for (item of banners; track item) {
+        <div class="banner">
+          <img src="{{item.url}}" alt="b1" height="170px">
+          <div class="txt">
+            <h5>{{item.per}}</h5>
+            <h2>{{item.title}}</h2>
+          </div>
+        </div>
+      }
+      </div>
+      <div class="nav">
+        <a routerLink="/electronic/bestseller" routerLinkActive="active">BEST SELLERS</a>
+        <a routerLink="/electronic/sale" routerLinkActive="active">ON SALE</a>
+        <a routerLink="/electronic/featured" routerLinkActive="active">FEATURED PRODUCTS</a>
+        
+        
+       </div>
+       <div class="change">
+        <router-outlet></router-outlet>
+       </div>
+</div>

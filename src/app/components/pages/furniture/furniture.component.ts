@@ -23,7 +23,7 @@ export class FurnitureComponent {
       per:'SAVE 50%OFF'
     },
     {
-      id:1,
+      id:3,
       url:"assets/banner7.jpg",
       title:"CHAIR",
       per:"SAVE 50%OFF"

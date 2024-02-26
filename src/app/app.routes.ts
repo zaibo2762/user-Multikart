@@ -18,6 +18,14 @@ import { FlowersComponent } from './components/pages/flowers/flowers.component';
 import { FlowerBestComponent } from './components/pages/flowers/flower-best/flower-best.component';
 import { FlowerFeaturedComponent } from './components/pages/flowers/flower-featured/flower-featured.component';
 import { FlowerSaleComponent } from './components/pages/flowers/flower-sale/flower-sale.component';
+import { BeautyComponent } from './components/pages/beauty/beauty.component';
+import { ElectronicsComponent } from './components/pages/electronics/electronics.component';
+import { EBestsellerComponent } from './components/pages/electronics/e-bestseller/e-bestseller.component';
+import { EFeaturedProductComponent } from './components/pages/electronics/e-featured-product/e-featured-product.component';
+import { EOnsaleComponent } from './components/pages/electronics/e-onsale/e-onsale.component';
+import { PetsComponent } from './components/pages/pets/pets.component';
+import { GymComponent } from './components/pages/gym/gym.component';
+import { ToolsComponent } from './components/pages/tools/tools.component';
 
 export const routes: Routes = [
     {
@@ -76,5 +84,31 @@ export const routes: Routes = [
         
       ],
     },
-    
+    {
+      path:'beauty',
+      component:BeautyComponent
+    },
+    {
+      path:'electronic',
+      component:ElectronicsComponent,
+      children: [ 
+        { path: '', component: EBestsellerComponent },
+        { path:'featured',component: EFeaturedProductComponent },
+        {path:'bestseller',component:EBestsellerComponent},
+        { path:'sale',component:EOnsaleComponent },
+        
+      ],
+    },
+    {
+      path:'pets',
+      component:PetsComponent
+    },
+    {
+      path:'gym',
+      component:GymComponent
+    },
+    {
+      path:'tools',
+      component:ToolsComponent
+    },
 ];

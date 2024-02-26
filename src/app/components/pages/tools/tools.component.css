@@ -1,0 +1,103 @@
+.tools1{
+    position: absolute;
+    top: 80px;
+    left: 70%;
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+    padding: 20px;
+      
+      
+}
+.tools2{
+    position: absolute;
+    top: 80px;
+    left: 60%;
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+    padding: 20px;
+}
+.left{
+    position: absolute;
+    top: 160px;
+    left: 100px;
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+    padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      z-index: 3;
+}
+.text h1{
+   font-size: 70px;
+}
+.but{
+      height: 50px;
+      width: 150px;
+      background-color: orangered;
+      border: none;
+      color: white;
+}
+.but:hover{
+    background-color: white;   
+    color: black;
+    border: 1px solid orangered;
+    transform: scale(1.1); /* Add a subtle scaling effect */
+  transition: all 0.3s ease-in-out;
+}
+.information{
+    position: absolute;
+    height: 200px;
+    width: 90%;
+    background-color: white;
+    margin-left: 80px;
+    
+    display: flex;
+    border: 1px solid #ccc; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  top: 550px;
+}
+.ship{
+    height: 150px;
+    width: 30%;
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: orangered;
+    display: flex;
+    border-right: 0.5px solid grey;
+}
+.ship:hover h5{
+    cursor: pointer;
+    color: orangered;
+}
+.ship2:hover h5{
+    cursor: pointer;
+    color: orangered;
+}
+.ship fa-icon{
+    margin-top: 20px;
+}
+.free{
+    margin-top: 40px;
+    margin-left: 10px;
+    color: black;
+
+    
+}
+.ship2{
+    height: 150px;
+    width: 30%;
+    background-color: white;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: orangered;
+    display: flex;
+}
+.ship2 fa-icon{
+    margin-top: 20px;
+}
+.top{
+    width: 100%;
+    height: 200px;
+}

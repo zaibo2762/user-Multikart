@@ -1,0 +1,168 @@
+<div class="gym">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/19.jpg" class="d-block w-100" alt="..." height="550px">
+            <div class="text">
+                <h4>Summer Sale</h4>
+                <h1>PROTEIN POWDER</h1>
+                <button class="but">Shop Nows </button>
+              </div>
+          </div>
+          <div class="carousel-item ">
+            <img src="assets/20.jpg" class="d-block w-100" alt="..." height="550px">
+            <div class="text">
+                <h4>Summer Sale</h4>
+                <h1>PROTEIN POWDER</h1>
+                <button class="but">Shop Nows </button>
+              </div>
+          </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="banners">
+        <div class="banner1">
+          <img src="assets/banner22.jpg" alt="banner" height="400px" width="400px">
+          <h3>SAVE 30%</h3>
+          <h1>GYM</h1>
+          </div>
+          <div class="banner2">
+          <img src="assets/banner23.jpg" alt="banner" height="400px" width="880px">
+          <h3>SAVE 30%</h3>
+          <h1>PROTEIN POWDER</h1>
+        </div>
+      </div>
+      <div class="heading">
+        <h3>Special Offer</h3>
+        <h1>TOP COLLECTION</h1>
+        <div class="line"></div>
+    </div>
+    <div class="items">
+        @for (item of gym; track item) {
+          
+             <div class="item-c">
+              <div class="all">
+               <div class="m-img">
+               <img src="{{item.mainimg}}" alt="main" width="295px" height="350px">
+               <div class="icon-container">
+                <fa-icon [icon]="cart"></fa-icon>
+                <fa-icon [icon]="search"></fa-icon>
+                <fa-icon [icon]="heart"></fa-icon>
+                <fa-icon [icon]="compare"></fa-icon>
+               </div>
+               </div>
+               
+              
+               
+            </div>
+               <div class="price">
+                  <div class="star">
+                  <fa-icon [icon]="star"></fa-icon>
+                  <fa-icon [icon]="star"></fa-icon>
+                  <fa-icon [icon]="star"></fa-icon>
+                  <fa-icon [icon]="star"></fa-icon>
+                  <fa-icon [icon]="star"></fa-icon>
+                </div>
+                <div class="info">
+                <span>{{item.title}}</span>
+                <span class="price1">{{item.price}}</span>
+              </div>
+                
+               </div>
+             </div>
+            }
+          </div>
+          <div class="b-container">
+            <div class="background-image">
+                <div class="heading" style="margin-top: 0px;">
+                    <h3>Special Offer</h3>
+                    <h1 style="color: white;">TOP COLLECTION</h1>
+                    <div class="line"></div>
+                    <div class="p">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur veritatis similique laudantium iure aliquam nam voluptatum! Tempore, praesentium eligendi officia, debitis odit, quisquam rerum libero quia voluptatem provident possimus officiis.</p>
+                </div>
+            </div>
+            <div class="items">
+                @for (item of topCollection; track item) {
+                  
+                     <div class="item-c">
+                      <div class="all">
+                       <div class="m-img">
+                       <img src="{{item.mainimg}}" alt="main" width="295px" height="350px">
+                       <div class="icon-container">
+                        <fa-icon [icon]="cart"></fa-icon>
+                        <fa-icon [icon]="search"></fa-icon>
+                        <fa-icon [icon]="heart"></fa-icon>
+                        <fa-icon [icon]="compare"></fa-icon>
+                       </div>
+                       </div>
+                       
+                      
+                       
+                    </div>
+                       <div class="price">
+                          <div class="star">
+                          <fa-icon [icon]="star"></fa-icon>
+                          <fa-icon [icon]="star"></fa-icon>
+                          <fa-icon [icon]="star"></fa-icon>
+                          <fa-icon [icon]="star"></fa-icon>
+                          <fa-icon [icon]="star"></fa-icon>
+                        </div>
+                        <div class="info">
+                        <span style="color: white;">{{item.title}}</span>
+                        <span class="price1">{{item.price}}</span>
+                      </div>
+                        
+                       </div>
+                     </div>
+                    }
+                  </div>
+            </div>
+          </div>
+          <div class="heading">
+            <h3>Recent Story</h3>
+            <h1>FROM THE BLOG</h1>
+            <div class="line"></div>
+        </div>
+        <div class="blogs">
+            <div class="card">
+              <img src="assets/b22.jpg" alt="img">
+              <div class="data">
+                <h5>25 January 2018</h5>
+                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+                <p>by john Dio, 2 comments</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="assets/b23.jpg" alt="img">
+              <div class="data">
+                <h5>26 January 2018</h5>
+                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+                <p>by john Dio, 2 comments</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="assets/b24.jpg" alt="img">
+              <div class="data">
+                <h5>27 January 2018</h5>
+                <h4>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h4>
+                <p>by john Dio, 2 comments</p>
+              </div>
+            </div>
+          </div>
+          <div class="logo">
+            <img src="assets/logo1.png" alt="logo">
+            <img src="assets/logo2.png" alt="logo">
+            <img src="assets/logo3.png" alt="logo">
+            <img src="assets/logo4.png" alt="logo">
+            <img src="assets/logo5.png" alt="logo">
+          </div>
+</div>

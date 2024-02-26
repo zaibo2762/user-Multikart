@@ -43,23 +43,23 @@ Home = [
   },
   {
     name:'Beauty',
-    path:"clothing"
+    path:"beauty"
   },
   {
     name:'Electronic',
-    path:"clothing"
+    path:"electronic"
   },
   {
     name:'Pet',
-    path:"clothing"
+    path:"pets"
   },
   {
     name:'Gym',
-    path:"clothing"
+    path:"gym"
   },
   {
     name:'Tools',
-    path:"clothing"
+    path:"tools"
   },
   {
     name:'Shoes',
