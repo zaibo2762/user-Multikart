@@ -26,6 +26,9 @@ import { EOnsaleComponent } from './components/pages/electronics/e-onsale/e-onsa
 import { PetsComponent } from './components/pages/pets/pets.component';
 import { GymComponent } from './components/pages/gym/gym.component';
 import { ToolsComponent } from './components/pages/tools/tools.component';
+import { ToolsSaleComponent } from './components/pages/tools/tools-sale/tools-sale.component';
+import { ToolsNewproductComponent } from './components/pages/tools/tools-newproduct/tools-newproduct.component';
+import { ShoesComponent } from './components/pages/shoes/shoes.component';
 
 export const routes: Routes = [
     {
@@ -109,6 +112,15 @@ export const routes: Routes = [
     },
     {
       path:'tools',
-      component:ToolsComponent
+      component:ToolsComponent,
+      children: [ 
+        { path: '', component: ToolsSaleComponent },
+        { path:'sale',component: ToolsSaleComponent },
+        { path:'new',component: ToolsNewproductComponent },
+      ]
+    },
+    {
+      path:'shoes',
+      component:ShoesComponent
     },
 ];

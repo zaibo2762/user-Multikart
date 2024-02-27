@@ -63,7 +63,7 @@ Home = [
   },
   {
     name:'Shoes',
-    path:"clothing"
+    path:"shoes"
   },
   {
     name:'Bag',

@@ -1,0 +1,282 @@
+.text{
+    position: absolute;
+  top: 160px;
+  left: 100px;
+  /* background-color: rgba(0, 0, 0, 0.5);  */
+  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 3;
+}
+.text h1{
+   font-size: 70px;
+}
+.but{
+      height: 50px;
+      width: 150px;
+      background-color: orangered;
+      border: none;
+      color: white;
+}
+.but:hover{
+    background-color: white;   
+    color: black;
+    border: 1px solid orangered;
+    transform: scale(1.1); /* Add a subtle scaling effect */
+  transition: all 0.3s ease-in-out;
+}
+.icons{
+    height: 200px;
+    width: 90%;
+    /* background-color: gray; */
+    margin-left: 5%;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+}
+.img{
+    height: 90px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 35px; */
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+.cats{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    /* margin-left: 90px */
+}
+.cats h6{
+    margin-top: 20px;
+}
+.cats:hover .img{
+    background-color: orangered;
+    color: white;
+}
+.heading{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .line{
+    height: 5px;
+    width: 250px;
+    background-color: orangered;
+    margin-left: 10px;
+  }
+  .welcome{
+    width: 800px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .banner1{
+    height: auto;
+    width: 50%;
+    /* background-color: aqua; */
+    margin-top: 40px;
+}
+.banner1 img{
+    margin-left: 150px;
+    margin-top: 10px;
+}
+.banner1 p{
+    position: absolute;
+    margin-left: 450px;
+    top: 200%;
+    font-weight: bolder;
+    font-size: large;
+    color: white;
+}
+.banner1 h1{
+    position: absolute;
+    margin-left: 440px;
+    top: 205%;
+    font-size: 50px;
+}
+.banner{
+    display: flex;
+}
+.banner2{
+    height: auto;
+    width: 50%;
+    /* background-color: aqua; */
+    margin-top: 40px;
+}
+.banner2 img{
+    margin-left: 35px;
+    margin-top: 10px;
+}
+.banner2 p{
+    position: absolute;
+    margin-left: 300px;
+    top: 200%;
+    font-weight: bolder;
+    font-size: large;
+    color: white;
+}
+.banner2 h1{
+    position: absolute;
+    margin-left: 250px;
+    top: 205%;
+    font-size: 50px;
+}
+.items{
+    position: relative;
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+  height: auto; /* Remove fixed height for dynamic content */
+  margin-top: 30px;
+    width: 100%;
+   
+    
+}
+.item-c{
+    height: 450px;
+    width: 300px;
+    /* border: 1px solid black; */
+    margin-top: 30px;
+    margin-left: 30px;
+
+}
+
+.price{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.star{
+    color: yellow;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info p{
+    margin: 0;
+}
+.icon-container{
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    background-color: white;
+    height: 60px;
+    width: 150px;
+    border-radius: 45%;
+}
+.m-img{
+    position: relative;
+    cursor: pointer;
+}
+.icon-container fa-icon{
+    margin-top: 20px;
+    /* margin-right: 5px; */
+    margin-left: 10px;
+}
+.icon-container fa-icon:hover{
+    color: orangered;
+}
+.m-img:hover .icon-container{
+    opacity: 1;
+} 
+.hover-image{
+    position: absolute;
+    left: 0;
+}
+.m-img .hover-image{
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.m-img:hover .hover-image{
+    opacity: 1;
+}
+.ban{
+    height: 300px;
+    width: 100%;
+    background-color: #F1F5F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.men{
+    margin-left: 20px;
+}
+.b1{
+    position: absolute;
+    left: 15%;
+    top: 355%;
+}
+.b2{
+    position: absolute;
+    left: 45%;
+    top: 355%;
+}
+.b3{
+    position: absolute;
+    left: 75%;
+    top: 355%;
+}
+.first{
+    height: 600px;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+  .head{
+    margin-top: 10px;
+    display: flex;
+  }
+  .head h5{
+       margin-right: 40px;
+  }
+  .head fa-icon{
+    margin-left: 30px;
+  }
+  .body{
+    margin-top: 30px;
+  }
+  .pre{
+    display: flex;
+    flex-direction: column;
+  }
+  .pro{
+    display: flex;
+    margin-top: 10px;
+  }
+  .detail{
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+  .toogle{
+    border: none;
+    background-color: white;
+  }
+  .slides{
+    display: flex;
+  }

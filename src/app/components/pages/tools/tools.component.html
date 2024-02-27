@@ -46,30 +46,266 @@
             </button>
         </div>
     </div>
-        <div class="top">
-            <div class="information">
-                <div class="ship">
-                    <fa-icon [icon]="truck" class="fa-4x"></fa-icon>
-                    <div class="free">
-                        <h5>FREE SHIPPING</h5>
-                        <p>Free Shippng World Wide</p>
+    <div class="top">
+        <div class="information">
+            <div class="ship">
+                <fa-icon [icon]="truck" class="fa-4x"></fa-icon>
+                <div class="free">
+                    <h5>FREE SHIPPING</h5>
+                    <p>Free Shippng World Wide</p>
+                </div>
+            </div>
+            <div class="ship">
+                <fa-icon [icon]="clock" class="fa-4x"></fa-icon>
+                <div class="free">
+                    <h5>24 X 7 Service</h5>
+                    <p>Online Service for New Customer</p>
+                </div>
+            </div>
+            <div class="ship2">
+                <fa-icon [icon]="horn" class="fa-4x"></fa-icon>
+                <div class="free">
+                    <h5>Festival Offer</h5>
+                    <p>New Online Special Festival Offer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="heading">
+        <h1>WELCOME TO TOOL STORE</h1>
+        <div class="line"></div>
+        <div class="welcome">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas impedit qui, provident
+            aliquid ipsa magni eum a optio veritatis pariatur doloribus ratione quod similique dolores tempore eius
+            nemo. Suscipit, hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sapiente cumque
+            dolore. Accusantium, dolor. Voluptatibus repellat, doloremque ut blanditiis necessitatibus aliquid alias
+            eaque quibusdam accusamus. Culpa tempore necessitatibus unde ullam!</div>
+    </div>
+    <div class="product">
+        @for (tool of Tools; track tool) {
+        <div class="card1">
+            <div class="img">
+                <img src="{{tool.img}}" alt="watch" height="200px" width="295px">
+            </div>
+            <div class="head">
+                <h5>{{tool.title}}</h5>
+            </div>
+            <div class="list">
+                <p>{{tool.sub1}}</p>
+                <p>{{tool.sub2}}</p>
+                <p>{{tool.sub3}}</p>
+                <p>{{tool.sub4}}</p>
+            </div>
+            <button class="but">Shop Nows </button>
+        </div>
+        }
+    </div>
+    <div class="heading">
+        <h1>POPULAR PRODUCTS</h1>
+        <div class="line"></div>
+    </div>
+    <div class="items">
+        @for (item of Parts; track item) {
+
+        <div class="item-c">
+            <div class="all">
+                <div class="m-img">
+                    <img src="{{item.img}}" alt="main" width="295px" height="350px">
+                    <div class="icon-container">
+                        <fa-icon [icon]="cart"></fa-icon>
+                        <fa-icon [icon]="search"></fa-icon>
+                        <fa-icon [icon]="heart"></fa-icon>
+                        <fa-icon [icon]="compare"></fa-icon>
                     </div>
                 </div>
-                <div class="ship">
-                    <fa-icon [icon]="clock" class="fa-4x"></fa-icon>
-                    <div class="free">
-                        <h5>24 X 7 Service</h5>
-                        <p>Online Service for New Customer</p>
+
+
+
+            </div>
+            <div class="price">
+                <div class="star">
+                    <fa-icon [icon]="star"></fa-icon>
+                    <fa-icon [icon]="star"></fa-icon>
+                    <fa-icon [icon]="star"></fa-icon>
+                    <fa-icon [icon]="star"></fa-icon>
+                    <fa-icon [icon]="star"></fa-icon>
+                </div>
+                <div class="info">
+                    <p>{{item.title}}</p>
+                    <p>{{item.price}}</p>
+                </div>
+
+            </div>
+        </div>
+        }
+    </div>
+    <div class="b-container">
+        <div class="background-image">
+            <div class="select">
+                <h2>SELECT YOUR VEHICLE</h2>
+                <select aria-label="Select Make">
+                    <option value="Select Make">Select Make</option>
+                    <option value="AUDI">AUDI</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Hyundai">Hyundai</option>
+                </select>
+                <select aria-label="Select Model">
+                    <option value="Select Model">Select Model</option>
+                </select>
+                <select aria-label="Select Category">
+                    <option value="Select Category">Select Category</option>
+                </select>
+                <select aria-label="Select Year">
+                    <option value="Select Year">Select Year</option>
+                </select>
+                <button>FIND MY PART</button>
+            </div>
+            <div class="b-items">
+                <div class="item-c">
+                    <div class="all">
+                        <div class="m-img">
+                            <img src="assets/t1.jpg" alt="main" width="295px" height="350px">
+                            <div class="icon-container">
+                                <fa-icon [icon]="cart"></fa-icon>
+                                <fa-icon [icon]="search"></fa-icon>
+                                <fa-icon [icon]="heart"></fa-icon>
+                                <fa-icon [icon]="compare"></fa-icon>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="price">
+                        <div class="star">
+                            <fa-icon [icon]="star"></fa-icon>
+                            <fa-icon [icon]="star"></fa-icon>
+                            <fa-icon [icon]="star"></fa-icon>
+                            <fa-icon [icon]="star"></fa-icon>
+                            <fa-icon [icon]="star"></fa-icon>
+                        </div>
+                        <div class="info">
+                            <p>Wheel Bearing</p>
+                            <p>$450.00</p>
+                        </div>
+
                     </div>
                 </div>
-                <div class="ship2">
-                    <fa-icon [icon]="horn" class="fa-4x"></fa-icon>
-                    <div class="free">
-                        <h5>Festival Offer</h5>
-                        <p>New Online Special Festival Offer</p>
+                <div class="item-c">
+                    <div class="all">
+                        <div class="m-img">
+                            <img src="assets/t2.jpg" alt="main" width="295px" height="350px">
+                            <div class="icon-container">
+                                <fa-icon [icon]="cart"></fa-icon>
+                                <fa-icon [icon]="search"></fa-icon>
+                                <fa-icon [icon]="heart"></fa-icon>
+                                <fa-icon [icon]="compare"></fa-icon>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="price">
+                        <div class="star">
+                            <fa-icon [icon]="star"></fa-icon>
+                            <fa-icon [icon]="star"></fa-icon>
+                            <fa-icon [icon]="star"></fa-icon>
+                            <fa-icon [icon]="star"></fa-icon>
+                            <fa-icon [icon]="star"></fa-icon>
+                        </div>
+                        <div class="info">
+                            <p>Cable Clutch</p>
+                            <p>$420.00</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
-    
+    </div>
+    <div class="three">
+        <div class="first">
+            <div class="head">
+                <h5>NEW PRODUCTS</h5>
+                
+                <button (click)="togglecontent()" class="toogle"><fa-icon [icon]="previous" ></fa-icon></button>
+                <button (click)="togglecontent()" class="toogle"><fa-icon [icon]="next" ></fa-icon></button>
+            </div>
+            <div class="body">
+                @if (content1) {
+                <div class="pre">
+                    <div class="pro">
+                        <img src="assets/t1.jpg" alt="tool" height="150px" width="150px">
+                        <div class="detail">
+                            <p>Wheel Bearing</p>
+                            <h4>$450.00</h4>
+                        </div>
+                    </div>
+                    <div class="pro">
+                        <img src="assets/t2.jpg" alt="tool" height="150px" width="150px">
+                        <div class="detail">
+                            <p>Cable clutch</p>
+                            <h4>$420.00</h4>
+                        </div>
+                    </div>
+                    <div class="pro">
+                        <img src="assets/t3.jpg" alt="tool" height="150px" width="150px">
+                        <div class="detail">
+                            <p>Cap Wheel</p>
+                            <h4>$532.00</h4>
+                        </div>
+                    </div>
+
+                </div>
+                }
+                @if (content1 == false) {
+                <div class="pre">
+                    <div class="pro">
+                        <img src="assets/t4.jpg" alt="tool" height="150px" width="150px">
+                        <div class="detail">
+                            <p>Suspension</p>
+                            <h4>$408.00</h4>
+                        </div>
+                    </div>
+                    <div class="pro">
+                        <img src="assets/t5.jpg" alt="tool" height="150px" width="150px">
+                        <div class="detail">
+                            <p>Lubricant</p>
+                            <h4>$612.00</h4>
+                        </div>
+                    </div>
+                    <div class="pro">
+                        <img src="assets/t6.jpg" alt="tool" height="150px" width="150px">
+                        <div class="detail">
+                            <p>Vacuum Pump Brake</p>
+                            <h4>$465.00</h4>
+                        </div>
+                    </div>
+
+                </div>
+                }
+            </div>
+        </div>
+        <div class="second">
+            <div class="upper">
+                <div class="nav">
+                    <a routerLink="/tools/sale">ON SALE</a>
+                    <a routerLink="/tools/new">NEW ARRIVAL</a>           
+                   </div>
+                   <div class="change">
+                    <router-outlet></router-outlet>
+                   </div>
+            </div>
+            <div class="down">
+                <img src="assets/banner24.jpg" alt="banner" width="850px" height="150px">
+            </div>
+        </div>
+    </div>
+    <div class="logo">
+        <img src="assets/logo1.png" alt="logo">
+        <img src="assets/logo2.png" alt="logo">
+        <img src="assets/logo3.png" alt="logo">
+        <img src="assets/logo4.png" alt="logo">
+        <img src="assets/logo5.png" alt="logo">
+      </div>
 </div>
