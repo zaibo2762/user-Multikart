@@ -1,176 +1,175 @@
-.navbar{
-    position: sticky;
-    /* margin-top: px; */
-    height: 100px;
-    width: 100%;
-    z-index: 4;
-    background-color: white;
-    /* border: 1px solid black; */
+.navbar {
+  position: sticky;
+  /* margin-top: px; */
+  height: 100px;
+  width: 100%;
+  z-index: 4;
+  background-color: white;
+  /* border: 1px solid black; */
 }
-.icon{
-    height: 90px;
-    width: 300px;
-    /* background-color: aqua; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 80px;
+.icon {
+  height: 90px;
+  width: 300px;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 80px;
 }
-.icon img{
-    margin-left: 60px;
+.icon img {
+  margin-left: 60px;
 }
-.nav-items{
-    position: absolute;
-    height: 90px;
-    width: 700px;
-    /* border: 1px solid black; */
-    margin-right: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 400px;
+.nav-items {
+  position: absolute;
+  height: 90px;
+  width: 700px;
+  /* border: 1px solid black; */
+  margin-right: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 400px;
 }
-.nav-items ul{
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    margin-top: 15px;
+.nav-items ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-top: 15px;
 }
-.nav-items li{
-    margin-right: 30px;
-    display: flex;
-    cursor: pointer;
-    margin-top: 25px;
-    /* justify-content: space-between; */
+.nav-items li {
+  margin-right: 30px;
+  display: flex;
+  cursor: pointer;
+  margin-top: 25px;
+  /* justify-content: space-between; */
 }
 
-.item{
-    display: flex;
-    justify-content: space-evenly;
+.item {
+  display: flex;
+  justify-content: space-evenly;
 }
-.item:hover{
-    color: orangered;
+.item:hover {
+  color: orangered;
 }
-.hidden{
-    position:absolute;
-    height: auto;
-    width: 150px;
-    background-color: white;
-    margin-top: 50px ;
-    /* display: none; */
+.hidden {
+  position: absolute;
+  height: auto;
+  width: 150px;
+  background-color: white;
+  margin-top: 50px;
+  /* display: none; */
 }
-.menu{
-    text-decoration: none;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    margin-left: 25px;
-    display: none;
+.menu {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-left: 25px;
+  display: none;
 }
-.nav-items li:hover .menu{
-    display: block;
+.nav-items li:hover .menu {
+  display: block;
 }
-.Hidden{
-    position: absolute;
-    left: -40%;
-    height: 300px;
-    width: 1200px;
-    margin-right: 200px;
-    background-color: white;
-    margin-top: 50px;
-    display: none;
+.Hidden {
+  position: absolute;
+  left: -40%;
+  height: 300px;
+  width: 1200px;
+  margin-right: 200px;
+  background-color: white;
+  margin-top: 50px;
+  display: none;
 }
-.port{
-    height: 100%;
-    width:20%;
-    /* background-color: aliceblue; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.port {
+  height: 100%;
+  width: 20%;
+  /* background-color: aliceblue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.port h4{
-    margin-left: 30px;
+.port h4 {
+  margin-left: 30px;
 }
-.port a{
-    margin-left: 30px;
-    margin-top: 10px;
+.port a {
+  margin-left: 30px;
+  margin-top: 10px;
 }
-.nav-items li:hover .Hidden{
-    display: flex;
+.nav-items li:hover .Hidden {
+  display: flex;
 }
-.right{
-    height: 70px;
-    width: 200px;
-    /* background-color: aqua; */
-    position: absolute;
-    right: 0;
-    margin-right: 30px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.right {
+  height: 70px;
+  width: 200px;
+  /* background-color: aqua; */
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.badge{
-    height: 20px;
-    width: 20px;
-    font-size: medium;
-    align-items: center;
-    position: absolute;
-    left: 80%;
-    /* margin-right: ; */
+.badge {
+  height: 20px;
+  width: 20px;
+  font-size: medium;
+  align-items: center;
+  position: absolute;
+  left: 80%;
+  /* margin-right: ; */
 }
-.badge span{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.badge span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.search{
-    cursor: pointer;
+.search {
+  cursor: pointer;
 }
-.cart{
-    cursor: pointer;
+.cart {
+  cursor: pointer;
 }
-.set{
-    cursor: pointer;
+.set {
+  cursor: pointer;
 }
-.lan{
-    height: auto;
-    width: 120px;
-    position: absolute;
-    background-color: white;
-    left: 0px;
-    /* display: flex; */
-    flex-direction: column;
-    justify-content: center;
-    display: none;
-
+.lan {
+  height: auto;
+  width: 120px;
+  position: absolute;
+  background-color: white;
+  left: 0px;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  display: none;
 }
-.lan h5{
-    margin-top: 10px;
-    margin-left: 5px;
+.lan h5 {
+  margin-top: 10px;
+  margin-left: 5px;
 }
-.lan a{
-    margin-top: 5px;
-    margin-left: 10px;
+.lan a {
+  margin-top: 5px;
+  margin-left: 10px;
 }
-.set:hover .lan{
-    display: flex;
+.set:hover .lan {
+  display: flex;
 }
-.info{
-    /* height: au;
+.info {
+  /* height: au;
     width: 200px; */
-    position: absolute;
-    background-color: white;
-    left: -10px;
-    align-items: center;
-    display: none;
+  position: absolute;
+  background-color: white;
+  left: -10px;
+  align-items: center;
+  display: none;
 }
-.cart:hover .info{
-    display: block;
+.cart:hover .info {
+  display: block;
 }
-a:hover{
-    color: orangered;
+a:hover {
+  color: orangered;
 }
-.Hidden a:hover{
-    color: orangered;
+.Hidden a:hover {
+  color: orangered;
 }

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faStar, faCartShopping, faMagnifyingGlass, faHeart, faCodeCompare, faGreaterThan, faLessThan } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-shoes',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule,RouterOutlet,RouterLink,RouterLinkActive],
   templateUrl: './shoes.component.html',
   styleUrl: './shoes.component.css'
 })

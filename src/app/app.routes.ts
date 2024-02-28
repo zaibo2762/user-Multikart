@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { InMemoryScrollingOptions, Routes, provideRouter, withInMemoryScrolling } from '@angular/router';
 import { ClothingComponent } from './components/pages/clothing/clothing.component';
 import { NewProductComponent } from './components/pages/clothing/new-product/new-product.component';
 import { BestSellerComponent } from './components/pages/clothing/best-seller/best-seller.component';
@@ -29,6 +29,17 @@ import { ToolsComponent } from './components/pages/tools/tools.component';
 import { ToolsSaleComponent } from './components/pages/tools/tools-sale/tools-sale.component';
 import { ToolsNewproductComponent } from './components/pages/tools/tools-newproduct/tools-newproduct.component';
 import { ShoesComponent } from './components/pages/shoes/shoes.component';
+import { SBestsellerComponent } from './components/pages/shoes/s-bestseller/s-bestseller.component';
+import { SFeaturedComponent } from './components/pages/shoes/s-featured/s-featured.component';
+import { SSaleComponent } from './components/pages/shoes/s-sale/s-sale.component';
+import { SNewarrivalComponent } from './components/pages/shoes/s-newarrival/s-newarrival.component';
+import { BagsComponent } from './components/pages/bags/bags.component';
+import { BagNewarrivalComponent } from './components/pages/bags/bag-newarrival/bag-newarrival.component';
+import { BagTrendingComponent } from './components/pages/bags/bag-trending/bag-trending.component';
+import { BagBestsellerComponent } from './components/pages/bags/bag-bestseller/bag-bestseller.component';
+import { MarijuanaComponent } from './components/pages/marijuana/marijuana.component';
+import { MSaleComponent } from './components/pages/marijuana/m-sale/m-sale.component';
+import { MBestsellerComponent } from './components/pages/marijuana/m-bestseller/m-bestseller.component';
 
 export const routes: Routes = [
     {
@@ -121,6 +132,39 @@ export const routes: Routes = [
     },
     {
       path:'shoes',
-      component:ShoesComponent
+      component:ShoesComponent,
+      children: [ 
+        { path: '', component: SBestsellerComponent },
+        { path:'featured',component: SFeaturedComponent },
+        { path:'newarrival',component: SNewarrivalComponent },
+        {path:'bestseller',component:SBestsellerComponent},
+        { path:'sale',component:SSaleComponent },
+        
+      ],
+      
     },
+    {
+      path:'bags',
+      component:BagsComponent,
+      children: [ 
+        { path: '', component: BagNewarrivalComponent },
+        { path:'newarrival',component: BagNewarrivalComponent },
+        { path:'trending',component: BagTrendingComponent },
+        { path:'bestseller',component: BagBestsellerComponent },
+      ]
+    },
+    {
+      path:'marijuana',
+      component:MarijuanaComponent,
+      children: [ 
+        { path: '', component: MSaleComponent },
+        { path:'sale',component: MSaleComponent },
+        { path:'bestseller',component: MBestsellerComponent },
+      ]
+    }
+    
 ];
+const scrollConfig: InMemoryScrollingOptions = {
+  scrollPositionRestoration: 'enabled' // Must be 'enabled', 'disabled', or 'top'
+};
+export const routing = provideRouter(routes, withInMemoryScrolling(scrollConfig));
