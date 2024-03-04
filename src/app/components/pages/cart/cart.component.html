@@ -1,0 +1,55 @@
+<div class="cart">
+    <h1> CART</h1>
+    @if(this.cartItems.length == 0){
+    <div class="empty">
+        <div class="img">
+            <img src="assets\icon-empty-cart.png" alt="Empty">
+        </div>
+        <div class="heading">
+            <h3>Your Cart Is Empty</h3>
+        </div>
+        <div class="happy">
+            <p>Add Something To Make Me Happy :)</p>
+        </div>
+    </div>
+    }
+    @if (cartItems.length > 0) {
+
+    <div class="item-list">
+        <table>
+            @for (item of cartItems; track $index) {
+            <tr>
+                <th>IMAGE</th>
+                <th>PRODUCT NAME</th>
+                <th>PRICE</th>
+                <th>QUANTITY</th>
+                <th>ACTION</th>
+                <th>TOTAL</th>
+            </tr>
+            <tr>
+                <td><img src="{{item.img}}" alt="" height="100px"></td>
+                <td>{{item.title}}</td>
+                <td>{{item.price}}</td>
+                <td>
+                    <button class="number-button">
+                        <span>-</span>
+                        <span>1</span>
+                        <span>+</span>
+                      </button>
+                </td>
+                <td>X</td>
+                <td style="color: orangered;">{{item.price}}</td>
+            </tr>
+        }
+        </table>
+        <div class="total">
+            <h5>Total Price:</h5>
+            <h5>$87.00</h5>
+        </div>
+    <div class="buttons">
+        <button class="but">Continue Shopping</button>
+        <button class="but">Checkout </button>
+    </div>
+    </div>
+}
+</div>

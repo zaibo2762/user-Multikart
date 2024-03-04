@@ -40,6 +40,7 @@ import { BagBestsellerComponent } from './components/pages/bags/bag-bestseller/b
 import { MarijuanaComponent } from './components/pages/marijuana/marijuana.component';
 import { MSaleComponent } from './components/pages/marijuana/m-sale/m-sale.component';
 import { MBestsellerComponent } from './components/pages/marijuana/m-bestseller/m-bestseller.component';
+import { CartComponent } from './components/pages/cart/cart.component';
 
 export const routes: Routes = [
     {
@@ -161,7 +162,11 @@ export const routes: Routes = [
         { path:'sale',component: MSaleComponent },
         { path:'bestseller',component: MBestsellerComponent },
       ]
-    }
+    },
+    {
+      path:'cart',
+      component:CartComponent
+    },
     
 ];
 const scrollConfig: InMemoryScrollingOptions = {
