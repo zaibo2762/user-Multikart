@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faStar, faCartShopping, faMagnifyingGlass, faHeart, faCodeCompare, faGreaterThan, faLessThan } from '@fortawesome/free-solid-svg-icons';
+import { CartService } from '../../../services/cart.service';
+import { Product } from '../../../interfaces/product';
 
 @Component({
   selector: 'app-shoes',
@@ -16,34 +18,43 @@ export class ShoesComponent {
     search=faMagnifyingGlass;
     heart= faHeart;
     compare= faCodeCompare;
-    shoes = [
+    constructor(private cartService: CartService) {}
+
+    addToCart(product: Product) {
+      this.cartService.addToCart(product);
+    }
+    products:Product[] = [
       {
         id:1,
         mainimg:"assets/s1.jpg",
-       simg:"assets/s2.jpg",
+       secimg:"assets/s2.jpg",
       title:'Shoes1',
-      price:"$31.50"
+      price:31.50,
+      quantity:10
       },
       {
         id:2,
         mainimg:"assets/s3.jpg",
-        simg:"assets/s4.jpg",
+        secimg:"assets/s4.jpg",
       title:'Shoes 2',
-      price:"$20.00"
+      price:20.00,
+      quantity:10
       },
       {
         id:3,
         mainimg:"assets/s5.jpg",
-        simg:"assets/s6.jpg",
+        secimg:"assets/s6.jpg",
       title:'Shoes 3',
-      price:"$27.55"
+      price:27.55,
+      quantity:10
       },
       {
         id:4,
         mainimg:"assets/s7.jpg",
-        simg:"assets/s8.jpg",
+        secimg:"assets/s8.jpg",
       title:'Shoes 4',
-      price:"$19.60"
+      price:19.60,
+      quantity:10
       },
       
     ]

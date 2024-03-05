@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {faStar,faCartShopping,faMagnifyingGlass,faHeart,faCodeCompare} from '@fortawesome/free-solid-svg-icons';
+import { CartService } from '../../../services/cart.service';
+import { Product } from '../../../interfaces/product';
 @Component({
   selector: 'app-watches',
   standalone: true,
@@ -15,7 +17,12 @@ export class WatchesComponent {
   search=faMagnifyingGlass;
   heart= faHeart;
   compare= faCodeCompare;
-watches= [
+  constructor(private cartService: CartService) {}
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+  }
+  watches= [
   {
     id:1,
     name:"Watch 1",
@@ -59,6 +66,40 @@ watches= [
     sub3:"Microband Watches",
     sub4:"MIL-W-46374",
     price:"$496.00"
+  },
+]
+  products : Product[]= [
+  {
+    id:1,
+    title:"Watch 1",
+    mainimg:"assets/w1.png",
+    secimg:10,
+    quantity:10,
+    price:156.00
+  },
+  {
+    id:2,
+    title:"Watch 2",
+    mainimg:"assets/w2.png",
+    secimg:10,
+    quantity:10,
+    price:207.00
+  },
+  {
+    id:3,
+    title:"Watch 3",
+    mainimg:"assets/w3.png",
+    secimg:10,
+    quantity:10,
+    price:356.00
+  },
+  {
+    id:4,
+    title:"Watch 4",
+    mainimg:"assets/w4.png",
+   secimg:10,
+   quantity:10,
+    price:496.00
   },
 ]
 banners =[

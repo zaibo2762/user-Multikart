@@ -1,28 +1,96 @@
 // cart.service.ts
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Product } from '../interfaces/product';
 
-export interface Product {
-  id: number;
-  name: string;
-  price: number;
+interface CartItem extends Product{
+  quantity:number;
 }
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
-  private cartItems: Product[] = [];
-  private cartItemsSubject = new BehaviorSubject<Product[]>([]);
-
-  cartItems$ = this.cartItemsSubject.asObservable();
-
-  addToCart(item: Product) {
-    this.cartItems.push(item);
-    this.cartItemsSubject.next([...this.cartItems]);
+  calculateTotalPrice(): void {
+    let total = 0;
+    this.cartItems.value.forEach(item => {
+      total += (item.price * item.quantity); 
+    });
+    this.cartTotal.next(total);
   }
 
-  getCartItems(): Product[] {
-    return this.cartItems;
+  
+    private cartItems = new BehaviorSubject<CartItem[]>([]);
+  cartCount = new BehaviorSubject<number>(0);
+  cartTotal = new BehaviorSubject<number>(0);
+
+  getCartItems() {
+    return this.cartItems.asObservable();
   }
+
+  getCartCount() {
+    return this.cartCount.asObservable();
+  }
+
+  addToCart(product: Product) {
+    let existingItem = this.cartItems.value.find(item => item.id === product.id);
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      this.cartItems.next([...this.cartItems.value, { ...product, quantity: 1 }]);
+    }
+    this.cartCount.next(this.cartCount.value + 1);
+    this.calculateTotalPrice();
+  }
+  removeItem(product: Product) {
+    const index = this.cartItems.value.findIndex((item) => item.id === product.id); 
+    if (index !== -1) {
+      const removedItem = this.cartItems.value[index];
+      this.cartCount.next(this.cartCount.value - removedItem.quantity); // Subtract the quantity 
+      this.cartItems.next(this.cartItems.value.filter((_, i) => i !== index)); 
+      this.calculateTotalPrice(); 
+    }
+  }
+  incrementQuantity(product: Product) {
+    let total = 0;
+    this.cartItems.value.forEach(item => {
+      total += (item.price * item.quantity); 
+    });
+    const existingItem = this.cartItems.value.find(item => item.id === product.id);
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      this.cartItems.next([...this.cartItems.value, { ...product, quantity: 1 }]);
+    }
+    this.cartCount.next(this.cartCount.value + 1);
+
+    this.calculateTotalPrice();
+  }
+  
+  decrementQuantity(product: Product) { 
+    const existingItem = this.cartItems.value.find(item => item.id === product.id);
+    if (existingItem) {
+      if (existingItem.quantity > 1) { // Check if quantity is greater than 1
+        existingItem.quantity--;
+      } else {
+        // Remove if quantity is 1
+        this.cartItems.next(this.cartItems.value.filter(item => item.id !== product.id));
+      }
+      this.cartCount.next(this.cartCount.value - 1);
+      this.calculateTotalPrice(); 
+    }
+  }
+  // calculateTotalPrice(): void { 
+  //   let total = 0;
+  // this.cartItems.value.forEach(item => {
+  //   const itemPrice = typeof item.price === 'number' ? item.price : 0; 
+  //   total += (itemPrice * item.quantity); 
+  // });
+  //   this.cartTotal.next(total); // Update the total 
+  // }
+
+  getCartTotal() { // Add getter for cartTotal
+    return this.cartTotal.asObservable();
+  }
+
 }

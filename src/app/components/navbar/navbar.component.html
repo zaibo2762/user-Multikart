@@ -102,12 +102,37 @@
       </div>
       <div class="cart">
         <fa-icon [icon]="cart" class="fa-2x"  routerLink="cart"></fa-icon>
+        @if(cartItemCount == 0){
         <div class="info">
           <p>Your Cart is currently empty..</p>
         </div>
+      } 
+      @else{
+        <div class="info">
+          @for (item of cartItems; track item) {
+            <div class="item">
+              <img src="{{item.mainimg}}" alt="img" height="100px">
+              <div class="detail">
+                <h6>{{item.title}}</h6>
+                <p> {{item.quantity}} x ${{item.price}}</p>
+              </div>
+            </div>
+          }
+          <div class="total">
+            <p>SubTotal</p>
+            <p>${{cartTotal}}</p>
+          </div>
+          <div class="check">
+            <a routerLink="cart">CART</a>
+            <a routerLink="cart">Checkout</a>
+          </div>
+
+        </div>
+      }
+      
         <div class="badge">
           <span class="position-absolute top-9 start-100 translate-middle badge rounded-pill bg-danger">
-            0
+            {{ cartItemCount }}
           </span>
 
         </div>

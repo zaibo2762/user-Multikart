@@ -336,3 +336,6 @@
   opacity: 1;
   cursor: pointer;
 }
+.disabled{
+  all: unset;
+}

@@ -49,13 +49,13 @@
   </div>
 </div>
   <div class="items">
-@for (item of list; track list) {
+@for (item of products; track item) {
      <div class="item-c">
       <div class="all">
        <div class="m-img">
        <img src="{{item.mainimg}}" alt="main" width="295px" height="350px">
        <div class="icon-container">
-        <fa-icon [icon]="cart"></fa-icon>
+       <button class="disabled" (click)="addToCart(item)"> <fa-icon [icon]="cart"></fa-icon></button>
         <fa-icon [icon]="search"></fa-icon>
         <fa-icon [icon]="heart"></fa-icon>
         <fa-icon [icon]="compare"></fa-icon>
@@ -79,7 +79,7 @@
         </div>
         <div class="info">
         <p>{{item.title}}</p>
-        <p>{{item.price}}</p>
+        <p>${{item.price}}</p>
       </div>
         
        </div>

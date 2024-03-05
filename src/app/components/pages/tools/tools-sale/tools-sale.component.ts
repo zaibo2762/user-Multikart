@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faTruck, faClock, faBullhorn, faStar, faCartShopping, faMagnifyingGlass, faHeart, faCodeCompare } from '@fortawesome/free-solid-svg-icons';
+import { Product } from '../../../../interfaces/product';
+import { CartService } from '../../../../services/cart.service';
 
 @Component({
   selector: 'app-tools-sale',
@@ -18,30 +20,43 @@ export class ToolsSaleComponent {
     search=faMagnifyingGlass;
     heart= faHeart;
     compare= faCodeCompare;
-  Parts= [
+    constructor(private cartService: CartService) {}
+
+    addToCart(product: Product) {
+      this.cartService.addToCart(product);
+    }
+    products:Product[] = [
     {
       id:1,
-      img:"assets/t1.jpg",
+      mainimg:"assets/t1.jpg",
+      secimg:10,
+      quantity:10,
       title:"Wheel Bearing",
-      price:"$450.00"
+      price:450.00
     },
     {
       id:2,
-      img:"assets/t2.jpg",
+      mainimg:"assets/t2.jpg",
+      secimg:10,
+      quantity:10,
       title:"Cable Clutch",
-      price:"$420.00"
+      price:420.00
     },
     {
       id:3,
-      img:"assets/t3.jpg",
+      mainimg:"assets/t3.jpg",
+      secimg:10,
+      quantity:10,
       title:"Cap Wheel",
-      price:"$532.00"
+      price:532.00
     },
     {
       id:4,
-      img:"assets/t4.jpg",
+      mainimg:"assets/t4.jpg",
+      secimg:10,
+      quantity:10,
       title:"Suspensions",
-      price:"$408.00"
+      price:408.00
     },
   ]
 }

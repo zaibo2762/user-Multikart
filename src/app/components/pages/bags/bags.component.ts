@@ -10,6 +10,8 @@ import {
   faLessThan,
   faGreaterThan,
 } from '@fortawesome/free-solid-svg-icons';
+import { Product } from '../../../interfaces/product';
+import { CartService } from '../../../services/cart.service';
 
 @Component({
   selector: 'app-bags',
@@ -34,34 +36,43 @@ export class BagsComponent {
   compare = faCodeCompare;
   previous = faLessThan;
   next = faGreaterThan;
-  BAGS = [
+  constructor(private cartService: CartService) {}
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+  }
+  products:Product[] = [
     {
       id: 1,
       mainimg: 'assets/bag1.jpg',
-      simg: 'assets/bag2.jpg',
+      secimg: 'assets/bag2.jpg',
       title: 'BAG 1',
-      price: '$31.50',
+      price: 31.50,
+      quantity:10
     },
     {
       id: 2,
       mainimg: 'assets/bag3.jpg',
-      simg: 'assets/bag4.jpg',
+      secimg: 'assets/bag4.jpg',
       title: 'BAG 2',
-      price: '$20.00',
+      price: 20.00,
+      quantity:10
     },
     {
       id: 3,
       mainimg: 'assets/bag5.jpg',
-      simg: 'assets/bag6.jpg',
+      secimg: 'assets/bag6.jpg',
       title: 'BAG 3',
-      price: '$27.55',
+      price: 27.55,
+      quantity:10
     },
     {
       id: 4,
       mainimg: 'assets/bag7.jpg',
-      simg: 'assets/bag8.jpg',
+      secimg: 'assets/bag8.jpg',
       title: 'Bag 4',
-      price: '$19.60',
+      price: 19.60,
+      quantity:10
     },
   ];
 }

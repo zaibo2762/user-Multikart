@@ -7,6 +7,8 @@ import {
   faCodeCompare,
   faStar,
 } from '@fortawesome/free-solid-svg-icons';
+import { Product } from '../../../../interfaces/product';
+import { CartService } from '../../../../services/cart.service';
 
 @Component({
   selector: 'app-bag-trending',
@@ -21,30 +23,43 @@ export class BagTrendingComponent {
   heart = faHeart;
   compare = faCodeCompare;
   star = faStar;
-  Trending = [
+  constructor(private cartService: CartService) {}
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+  }
+  products:Product[] = [
     {
       id: 1,
-      imgurl: 'assets/bag5.jpg',
-      name: 'Bag 5',
-      price: '$301.00',
+      mainimg: 'assets/bag5.jpg',
+      secimg:10,
+      quantity:10,
+      title: 'Bag 5',
+      price: 301.00,
     },
     {
       id: 2,
-      imgurl: 'assets/bag6.jpg',
-      name: 'Bag 6',
-      price: '$216.60',
+      mainimg: 'assets/bag6.jpg',
+      secimg:10,
+      quantity:10,
+      title: 'Bag 6',
+      price: 216.60,
     },
     {
       id: 3,
-      imgurl: 'assets/bag7.jpg',
-      name: 'Bag 7',
-      price: '$170.00',
+      mainimg: 'assets/bag7.jpg',
+      secimg:10,
+      quantity:10,
+      title: 'Bag 7',
+      price: 170.00,
     },
     {
       id: 4,
-      imgurl: 'assets/bag8.jpg',
-      name: 'Bag 8',
-      price: '$346.50',
+      mainimg: 'assets/bag8.jpg',
+      secimg:10,
+      quantity:10,
+      title: 'Bag 8',
+      price: 346.50,
     },
   ];
 }

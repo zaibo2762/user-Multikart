@@ -334,3 +334,6 @@
 .active{
     color: orangered;
 }
+.disabled{
+    all: unset;
+}

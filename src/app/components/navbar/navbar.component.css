@@ -156,13 +156,16 @@
   display: flex;
 }
 .info {
-  /* height: au;
-    width: 200px; */
+  /* height: au; */
+    width: 200px; 
   position: absolute;
   background-color: white;
   left: -10px;
   align-items: center;
   display: none;
+}
+.info h6{
+  margin-top: 10px;
 }
 .cart:hover .info {
   display: block;
@@ -172,4 +175,27 @@ a:hover {
 }
 .Hidden a:hover {
   color: orangered;
+}
+.total{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.check{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.check a{
+  all: unset;
+}
+.check a:hover{
+  color: orangered;
+  cursor: pointer;
 }

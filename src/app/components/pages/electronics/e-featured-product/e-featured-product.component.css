@@ -68,3 +68,6 @@
 .m-img:hover .icon-container{
     opacity: 1;
 } 
+.disabled{
+    all: unset;
+  }

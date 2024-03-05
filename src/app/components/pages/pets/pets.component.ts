@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faTruck, faClock, faBullhorn, faStar, faCartShopping, faSearch, faHeart, faCodeCompare } from '@fortawesome/free-solid-svg-icons';
+import { CartService } from '../../../services/cart.service';
+import { Product } from '../../../interfaces/product';
 
 @Component({
   selector: 'app-pets',
@@ -58,30 +60,43 @@ cart=faCartShopping;
 search=faSearch;
 heart=faHeart;
 compare=faCodeCompare;
-pets = [
+constructor(private cartService: CartService) {}
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+  }
+  products:Product[] = [
   {
     id:1,
-    imgurl:'assets/pet1.jpg',
-    name:'Steel Bowl Puppy',
-    price:"$114.00"
+    mainimg:'assets/pet1.jpg',
+    secimg:10,
+    quantity:10,
+    title:'Steel Bowl Puppy',
+    price:114.00
   },
   {
     id:2,
-    imgurl:'assets/pet2.jpg',
-    name:'Calcium Milk Bone',
-    price:"$133.00"
+    mainimg:'assets/pet2.jpg',
+    secimg:10,
+    quantity:10,
+    title:'Calcium Milk Bone',
+    price:133.00
   },
   {
     id:3,
-    imgurl:'assets/pet3.jpg',
-    name:'Dog Sleep Mat',
-    price:"$122.40"
+    mainimg:'assets/pet3.jpg',
+    secimg:10,
+    quantity:10,
+    title:'Dog Sleep Mat',
+    price:122.40
   },
   {
     id:4,
-    imgurl:'assets/pet4.jpg',
-    name:'Dog Super Bone Toy',
-    price:"$128.40"
+    mainimg:'assets/pet4.jpg',
+    secimg:10,
+    quantity:10,
+    title:'Dog Super Bone Toy',
+    price:128.40
   },
 ]
 }

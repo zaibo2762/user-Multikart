@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCartShopping, faMagnifyingGlass, faHeart, faCodeCompare, faStar } from '@fortawesome/free-solid-svg-icons';
+import { Product } from '../../../../interfaces/product';
+import { CartService } from '../../../../services/cart.service';
 
 @Component({
   selector: 'app-s-featured',
@@ -15,30 +17,43 @@ export class SFeaturedComponent {
   heart= faHeart;
   compare= faCodeCompare;
   star= faStar;
-  featured = [
+  constructor(private cartService: CartService) {}
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+  }
+  products:Product[] = [
     {
       id:1,
-      imgurl:'assets/s13.jpg',
-      name:'Shoes 13',
-      price:"$301.00"
+      mainimg:'assets/s13.jpg',
+      secimg:10,
+      quantity:10,
+      title:'Shoes 13',
+      price:301.00
     },
     {
       id:2,
-      imgurl:'assets/s14.jpg',
-      name:'Shoes 14',
-      price:"$216.60"
+      mainimg:'assets/s14.jpg',
+      secimg:10,
+      quantity:10,
+      title:'Shoes 14',
+      price:216.60
     },
     {
       id:3,
-      imgurl:'assets/s15.jpg',
-      name:'Shoes 15',
-      price:"$170.00"
+      mainimg:'assets/s15.jpg',
+      secimg:10,
+      quantity:10,
+      title:'Shoes 15',
+      price:170.00
     },
     {
       id:4,
-      imgurl:'assets/s16.jpg',
-      name:'Shoes 16',
-      price:"$346.50"
+      mainimg:'assets/s16.jpg',
+      secimg:10,
+      quantity:10,
+      title:'Shoes 16',
+      price:346.50
     },
     
   ]

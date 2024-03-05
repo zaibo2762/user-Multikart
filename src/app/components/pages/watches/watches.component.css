@@ -397,3 +397,6 @@ transition: all 0.3s ease-in-out;
     opacity: 1;
     cursor: pointer;
 }
+.disabled{
+    all: unset;
+  }

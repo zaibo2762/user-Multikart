@@ -320,3 +320,6 @@ transition: opacity 0.5s ease-in-out;
 .ship2 fa-icon{
   margin-top: 20px;
 }
+.disabled{
+  all: unset;
+}

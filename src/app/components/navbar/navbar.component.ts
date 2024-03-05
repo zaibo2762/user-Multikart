@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faBars,
@@ -9,6 +9,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { SidebarService } from '../../services/sidebar.service';
 import { RouterLink } from '@angular/router';
+import { CartService } from '../../services/cart.service';
+import { Product } from '../../interfaces/product';
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -16,13 +18,36 @@ import { RouterLink } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
-export class NavbarComponent {
+export class NavbarComponent  implements OnInit{
   menu = faBars;
   down = faAngleDown;
   search = faSearch;
   setting = faGear;
   cart = faCartShopping;
-  constructor(private sidebarService: SidebarService) {}
+  cartItemCount = 0;
+  cartItems: Product[] =[];
+  cartTotal=0;
+
+  
+   
+  
+  constructor(private cartService: CartService,private sidebarService : SidebarService) {
+    this.cartService.getCartCount().subscribe(count => {
+      this.cartItemCount = count;
+    });
+  }
+  ngOnInit() {
+    this.cartService.getCartItems().subscribe(items => {
+      this.cartItems = items;
+      this.cartItemCount = items.reduce((acc, item) => acc + item.quantity, 0);
+      
+    });
+
+    this.cartService.getCartTotal().subscribe(total => {
+      this.cartTotal = total;
+    });
+  }
+
   toggleSidebar() {
     this.sidebarService.toggleSidebar();
   }
@@ -270,4 +295,5 @@ export class NavbarComponent {
       name: 'Dollar',
     },
   ];
+  
 }

@@ -86,4 +86,9 @@ transition: all 0.3s ease-in-out;
     margin-left: 50px;
     margin-right: 50px;
 }
-  
+.pointer{
+  cursor: pointer;
+}
+.disabled{
+  all: unset;
+}

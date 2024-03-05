@@ -73,3 +73,6 @@
     font-weight: bold;
     color: orangered;
 }
+.disabled{
+    all: unset;
+  }

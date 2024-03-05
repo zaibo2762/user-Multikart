@@ -11,6 +11,8 @@ import {
   faStar,
   faTruck,
 } from '@fortawesome/free-solid-svg-icons';
+import { CartService } from '../../../services/cart.service';
+import { Product } from '../../../interfaces/product';
 @Component({
   selector: 'app-beauty',
   standalone: true,
@@ -27,33 +29,44 @@ export class BeautyComponent {
   search = faSearch;
   heart = faHeart;
   compare = faCodeCompare;
-  beauty = [
+  products:Product[] = [
     {
       id: 1,
-      imgurl: 'assets/buty1.jpg',
-      name: 'Foundation',
-      price: '$202.50',
+      mainimg: 'assets/buty1.jpg',
+      secimg:10,
+      title: 'Foundation',
+      price: 202.50,
+      quantity:10
     },
     {
       id: 2,
-      imgurl: 'assets/buty2.jpg',
-      name: 'Bronzer',
-      price: '$135.00',
+      mainimg: 'assets/buty2.jpg',
+      secimg:10,
+      title: 'Bronzer',
+      price: 135.00,
+      quantity:10
     },
     {
       id: 3,
-      imgurl: 'assets/buty3.jpg',
-      name: 'Face Primer',
-      price: '$280.80',
+      mainimg: 'assets/buty3.jpg',
+      secimg:10,
+      title: 'Face Primer',
+      price: 280.80,
+      quantity:10
     },
     {
       id: 4,
-      imgurl: 'assets/buty4.jpg',
-      name: 'Concealer',
-      price: '$104.00',
+      mainimg: 'assets/buty4.jpg',
+      secimg:10,
+      title: 'Concealer',
+      price: 104.00,
+      quantity:10
     },
   ];
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(private sanitizer: DomSanitizer , private cartService: CartService) {}
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+  }
   youtubeUrl = 'https://youtu.be/3ITum6Gb53s?si=vethPyQXVYCp-jLd';
   safeURL: SafeResourceUrl | undefined;
 

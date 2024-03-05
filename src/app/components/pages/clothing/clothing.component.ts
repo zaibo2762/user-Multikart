@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {faStar,faCartShopping,faMagnifyingGlass,faHeart,faCodeCompare,faTruck,faClock,faBullhorn} from '@fortawesome/free-solid-svg-icons';
+import { Product } from '../../../interfaces/product';
+import { CartService } from '../../../services/cart.service';
 
 
 @Component({
@@ -24,7 +26,7 @@ clock=faClock
 horn=faBullhorn
 
   
-  list = [
+  products : Product[] = [
     {
       id:1,
       mainimg:"assets/i1.jpg",
@@ -34,7 +36,8 @@ horn=faBullhorn
       { src: 'assets/i3.jpg', alt: 'Thumbnail 3',  },
     ],
     title:'Trim Dresses',
-    price:"$87.00"
+    price:87.00,
+    quantity:34
     },
     {
       id:2,
@@ -46,7 +49,8 @@ horn=faBullhorn
       { src: 'assets/i7.jpg', alt: 'Thumbnail 7',  },
     ],
     title:'Belted Dresses',
-    price:"$111.00"
+    price:111.00,
+    quantity:30
     },
     {
       id:3,
@@ -57,7 +61,8 @@ horn=faBullhorn
       
     ],
     title:'Fitted Dresses',
-    price:"$104.00"
+    price:104.00,
+    quantity:23
     },
     {
       id:4,
@@ -68,11 +73,17 @@ horn=faBullhorn
       
     ],
     title:'Fitted Dresses',
-    price:"$104.00"
+    price:104.00,
+    quantity:45
     },
   ]
-  changeMainImage(item: any, newMainImage: string): void {
+  changeMainImage(item: Product, newMainImage: string): void {
+    
     item.mainimg = newMainImage;
   }
+  constructor(private cartService: CartService) {}
 
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+  }
 }
