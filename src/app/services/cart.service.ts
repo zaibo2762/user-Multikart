@@ -1,4 +1,3 @@
-// cart.service.ts
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Product } from '../interfaces/product';
@@ -70,26 +69,19 @@ export class CartService {
   decrementQuantity(product: Product) { 
     const existingItem = this.cartItems.value.find(item => item.id === product.id);
     if (existingItem) {
-      if (existingItem.quantity > 1) { // Check if quantity is greater than 1
+      if (existingItem.quantity > 1) { 
         existingItem.quantity--;
       } else {
-        // Remove if quantity is 1
+        
         this.cartItems.next(this.cartItems.value.filter(item => item.id !== product.id));
       }
       this.cartCount.next(this.cartCount.value - 1);
       this.calculateTotalPrice(); 
     }
   }
-  // calculateTotalPrice(): void { 
-  //   let total = 0;
-  // this.cartItems.value.forEach(item => {
-  //   const itemPrice = typeof item.price === 'number' ? item.price : 0; 
-  //   total += (itemPrice * item.quantity); 
-  // });
-  //   this.cartTotal.next(total); // Update the total 
-  // }
+ 
 
-  getCartTotal() { // Add getter for cartTotal
+  getCartTotal() { 
     return this.cartTotal.asObservable();
   }
 
